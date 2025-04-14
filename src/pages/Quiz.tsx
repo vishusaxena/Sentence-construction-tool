@@ -38,7 +38,7 @@ export default function Quiz() {
       setUsedWords(parsed.usedWords);
       setLoading(false);
     } else {
-      fetch("/public/sample.json")
+      fetch("/sample.json")
         .then((res) => res.json())
         .then((data) => {
           const formattedQuestions: Question[] = data.data.questions.map((q: any) => ({
